@@ -7,9 +7,9 @@ fun main() {
     val salaryTrainee = 20000
     val salaryExpensesEmployees = numbersEmployees * salaryEmployees
     val generalExpenses = (numbersTrainee * salaryTrainee + salaryExpensesEmployees)
-    val averageSalary = generalExpenses / (numbersEmployees + numbersTrainee)
+    val averageSalaryAll = generalExpenses / (numbersEmployees + numbersTrainee)
 
     println(salaryExpensesEmployees)
     println(generalExpenses)
-    println(averageSalary)
+    println(averageSalaryAll)
 }
