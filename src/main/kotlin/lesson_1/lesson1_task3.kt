@@ -6,8 +6,9 @@ fun main() {
     var minute = 7
 
     println(yearOfFlight)
-    println(hour)
-    println(minute)
+    println("0" + hour)
+    println("0" + minute)
+
 
     hour = 10
     minute = 55
