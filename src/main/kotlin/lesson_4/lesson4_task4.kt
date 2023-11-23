@@ -9,8 +9,6 @@ fun main() {
     val back = isEven
     val abs = !isEven
 
-    println("Упражнения для рук:    $hands")
-    println("Упражнения для ног:    $foots")
-    println("Упражнения для спины:  $back")
-    println("Упражнения для спины:  $abs")
+    println("Упражнения для рук:    $hands \nУпражнения для ног:    $foots \nУпражнения для спины:  $back " +
+            "\nУпражнения для пресса:  $abs")
 }
