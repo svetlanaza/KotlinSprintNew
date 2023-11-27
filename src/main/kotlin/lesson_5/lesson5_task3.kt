@@ -4,7 +4,7 @@ fun main() {
     val number1 = (0..42).random()
     val number2 = (0..42).random()
 
-    println("Введите по очереди два числа")
+    println("Введите два числа по очереди")
 
     val firstNumber = readln().toInt()
     val secondNumber = readln().toInt()
