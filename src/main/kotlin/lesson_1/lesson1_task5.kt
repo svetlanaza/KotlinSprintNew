@@ -6,13 +6,6 @@ fun main() {
     val hours = minutes / 60
     val remainingMinutes = minutes % 60
     val remainingSeconds = seconds % 60
-    val hoursFormatTime = String.format("%02d",hours)
-    val secondsFormatTime = String.format("%02d",remainingSeconds)
 
-    print(hoursFormatTime)
-    print(":")
-    print(remainingMinutes)
-    print(":")
-    println(secondsFormatTime)
-
+    println("%02d:%02d:%02d".format(hours, remainingMinutes, remainingSeconds))
 }
