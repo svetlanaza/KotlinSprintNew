@@ -5,10 +5,10 @@ fun main() {
     var where = "E4"
     var moveNumber = 1
 
-    println("Ход № $moveNumber: $from-$where")
+    println("$from-$where;$moveNumber")
     from = "D2"
     where = "D3"
     moveNumber++
 
-    println("Ход № $moveNumber: $from-$where")
+    println("$from-$where;$moveNumber")
 }
