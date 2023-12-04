@@ -3,11 +3,13 @@ package lesson_2
 fun main() {
     val crystalOre = 7
     val ironOre = 11
-    val crystalOreBonus = crystalOre / 5
-    val ironOreBonus = ironOre / 5
-    val crystalOreAll = crystalOre + crystalOreBonus
-    val ironOreAll = ironOre + ironOreBonus
+    val bonusPercent = 20.0
+    val allPercent = 100
 
-    println(crystalOreAll)
-    println(ironOreAll)
+    val bonusCoefficient = (bonusPercent / allPercent)
+    val crystalOreBonus = (crystalOre * bonusCoefficient).toInt()
+    val ironOreBonus = (ironOre * bonusCoefficient).toInt()
+
+    println("Добыто бонусной кристаллической руды: $crystalOreBonus")
+    println("Добыто бонусной железной руды: $ironOreBonus")
 }
