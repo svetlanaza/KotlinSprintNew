@@ -7,14 +7,18 @@ fun main() {
         Random.nextInt(1,42);
         Random.nextInt(1,42)}
 
-
-    println(winningNumbers)
     println("Введите по очереди три числа")
 
-    val number1 = readln().toInt()
-    val number2 = readln().toInt()
-    val number3 = readln().toInt()
-    val mutableList = mutableListOf(3)
+    val mutableList = mutableListOf(readln().toInt(), readln().toInt(), readln().toInt())
+    val intersectedList = winningNumbers.intersect(mutableList).size
+
+    when(intersectedList) {
+        3 -> println("Вы выиграли джекпот! Угадали 3 числа")
+        2 -> println("Вы выиграли второй приз! Угадали 2 числа")
+        1 -> println("Вы выиграли утешительнй приз! Угадали 1 число")
+        else -> println("Вы не угадали ни одно число!")
+    }
+    println("Выигрышные числа: $winningNumbers")
     }
 
 
