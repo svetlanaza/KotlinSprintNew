@@ -9,10 +9,16 @@ fun main() {
     val numberSymbolMax = readln().toInt()
     var password = ""
 
-    for (i in 1..numberSymbolMax) {
-        password += chars.random()
+    if (numberSymbolMax < numberSymbolMin) {
+        println("Недостататочно символовв")
+        return
+    } else {
 
+        for (i in 1..numberSymbolMax) {
+            password += chars.random()
+        }
     }
     println("Ваш пароль: $password")
 }
+
 
