@@ -5,7 +5,6 @@ fun main() {
     val seconds = readln().toInt()
 
     for (i in seconds downTo 0) {
-        i
         Thread.sleep(1000)
         println("Осталось $i секунд")
     }
