@@ -12,19 +12,18 @@ fun main() {
     println("Какой ингредиент вы хотите заменить?")
 
     val ingredient = readln()
+    val index = arrayOfIngredients.indexOf(ingredient)
 
-    if (ingredient in arrayOfIngredients) {
-        val index = arrayOfIngredients.indexOf(ingredient)
-        println("Какой ингредиент вы хотите добавить?")
-
-        val ingredientNew = readln()
-        arrayOfIngredients.set(index, ingredientNew)
-        arrayOfIngredients.get(index)
-    } else {
-
+    if (ingredient !in arrayOfIngredients) {
         println("Такого ингредиента в рецепте нет")
         return
     }
+    println("Какой ингредиент вы хотите добавить?")
+
+    val ingredientNew = readln()
+    arrayOfIngredients.set(index, ingredientNew)
+    arrayOfIngredients.get(index)
+
     println("Ваш новый рецепт:")
     println(arrayOfIngredients[0])
     println(arrayOfIngredients[1])
