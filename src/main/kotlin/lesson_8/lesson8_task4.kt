@@ -14,7 +14,7 @@ fun main() {
     val ingredient = readln()
     val index = arrayOfIngredients.indexOf(ingredient)
 
-    if (ingredient !in arrayOfIngredients) {
+    if (index == -1) {
         println("Такого ингредиента в рецепте нет")
         return
     }
