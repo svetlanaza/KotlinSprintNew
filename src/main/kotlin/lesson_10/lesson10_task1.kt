@@ -10,13 +10,11 @@ fun main() {
     val computer = diceRoll()
     println("Мое число: $computer")
 
-    if (gamer > computer)
-        println("Победило человечество!")
-    else if (gamer < computer)
-        println("Победила машина!")
-    else
-        println("Победила дружба!")
-
+    when {
+        gamer > computer -> println("Победило человечество")
+        gamer < computer -> println("Победила машина")
+        else -> println("Победила дружба")
+    }
 }
 
 fun diceRoll(): Int = (1..6).random()
