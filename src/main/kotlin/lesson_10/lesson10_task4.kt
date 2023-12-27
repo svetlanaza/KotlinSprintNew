@@ -1,7 +1,7 @@
 package lesson_10
 
 fun main() {
-    val wonGame = 0
+    var wonGame = 0
 
     do {
         println("Ход игрока. Бросайте кости")
@@ -16,14 +16,15 @@ fun main() {
         println()
 
         when {
-            gamer > computer ->
+            gamer > computer -> {
                 println("Победило человечество")
+                wonGame++
+            }
             gamer < computer -> println("Победила машина")
             else -> println("Победила дружба")
         }
 
-        val playAgain = continueGame()
-    } while (playAgain)
+    } while (continueGame())
     println("Количество выигранных партий: $wonGame")
 
 }
