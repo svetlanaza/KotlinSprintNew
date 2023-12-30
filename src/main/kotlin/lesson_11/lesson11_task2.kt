@@ -26,7 +26,7 @@ class User2(
         val passwordNew = readln()
         password = passwordNew
 
-        println("Пароль изменен на $passwordNew!")
+        println("Пароль изменен, новый пароль $passwordNew!")
 
     }
 
