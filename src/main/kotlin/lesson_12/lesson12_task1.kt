@@ -11,6 +11,7 @@ class WeatherDay() {
         println("Наличие осадков: ${if (isPrecipitation) "Да" else "Нет"}")
     }
 }
+
 fun main() {
     val weatherDay1 = WeatherDay()
     weatherDay1.dayTemperature = 20
