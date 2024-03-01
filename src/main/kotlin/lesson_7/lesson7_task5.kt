@@ -7,18 +7,13 @@ fun main() {
     val chars = ('a'..'z') + ('A'..'Z') + ('0'..'9')
     val numberSymbolMin = 6
     val numberSymbolMax = readln().toInt()
-    var password = ""
-
-    if (numberSymbolMax < numberSymbolMin) {
-        println("Недостататочно символовв")
-        return
+    val password = if (numberSymbolMax >= numberSymbolMin) {
+        chars.shuffled().take(numberSymbolMax).joinToString("")
     } else {
-
-        for (i in 1..numberSymbolMax) {
-            password += chars.random()
-        }
+        println("Недостататочно символов")
     }
     println("Ваш пароль: $password")
 }
+
 
 
