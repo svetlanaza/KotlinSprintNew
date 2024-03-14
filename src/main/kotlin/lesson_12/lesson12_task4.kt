@@ -7,7 +7,7 @@ class WeatherInfo(dayTemperatureKelvin: Int, nightTemperatureKelvin: Int) {
     var nightTemperature: Int = (nightTemperatureKelvin - KELVIN_IN_CELSIUS).toInt()
     var isPrecipitation: Boolean = false
 
-    fun displayWeatherInfo() {
+    init {
         println("Дневная температура: $dayTemperature°C")
         println("Ночная температура: $nightTemperature°C")
         println("Наличие осадков: ${if (isPrecipitation) "Да" else "Нет"}")
@@ -15,6 +15,6 @@ class WeatherInfo(dayTemperatureKelvin: Int, nightTemperatureKelvin: Int) {
 }
 
 fun main() {
-    val weatherDay = WeatherInfo(301,290).displayWeatherInfo()
+    val weatherDay = WeatherInfo(301,290)
 
 }
