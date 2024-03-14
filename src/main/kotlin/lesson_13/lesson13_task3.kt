@@ -15,7 +15,7 @@ fun main() {
     val contactsList = listOf(
         Client("Victory", 89991111112),
         Client("Mary", 89907777272),
-        Client("Oleg", 89992223233, null),
+        Client("Oleg", 89992223233, "null"),
         Client("Victor", 89994444545, "Amazon"),
         Client("Den", 89992222121, "Amazon")
     )
