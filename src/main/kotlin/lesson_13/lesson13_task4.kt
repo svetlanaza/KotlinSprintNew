@@ -16,8 +16,8 @@ fun main() {
 
     while (true) {
         println("Хотите добавить контакт?")
-        val answer = readln()
-        if (answer == "нет") {
+
+        if (readln().equals("да", ignoreCase = true)) {
             return
         }
         print("Введите имя")
