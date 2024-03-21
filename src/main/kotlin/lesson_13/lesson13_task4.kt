@@ -17,7 +17,7 @@ fun main() {
     while (true) {
         println("Хотите добавить контакт?")
 
-        if (readln().equals("да", ignoreCase = true)) {
+        if (readln().equals("нет", ignoreCase = true)) {
             return
         }
         print("Введите имя")
