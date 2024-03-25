@@ -1,18 +1,25 @@
 package lesson_14
 
-open class Liner(
-    val name: String,
-    val speed: Int,
-    val capacity: Int,
-    val tonnage: Int,
+open class Ship(
+    open val name: String,
+    open val speed: Int,
+    open val capacity: Int,
+    open val tonnage: Int,
 )
+
+class Liner(
+    override val name: String,
+    override val speed: Int,
+    override val capacity: Int,
+    override val tonnage: Int,
+) : Ship(name = "Быстрый", speed  = 500, capacity = 3000, tonnage  = 2000)
 
 class Icebreaker(
     name: String,
     speed: Int,
     capacity: Int,
     tonnage: Int,
-) : Liner(name, speed, capacity, tonnage) {
+) : Ship(name, speed, capacity, tonnage) {
 
     fun breakTheIce() {
         println("Может колоть лед")
@@ -23,10 +30,10 @@ class Tanker(name: String,
              speed: Int,
              capacity: Int,
              tonnage: Int,
-) : Liner(name, speed, capacity, tonnage)
+) : Ship(name, speed, capacity, tonnage)
 
 fun main() {
-    val liner = Liner("Быстрый", 500, 3000, 2000)
+    val liner = Liner("Океан", 300, 200, 5000)
     val icebreaker = Icebreaker("Ленин", 100, 50, 10000)
     val tanker = Tanker("Адмирал", 200, 100, 20000)
 
