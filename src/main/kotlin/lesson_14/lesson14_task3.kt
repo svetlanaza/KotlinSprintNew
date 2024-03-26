@@ -32,8 +32,8 @@ fun main() {
         }
     }
 
-    println("Сумма периметров всех черных фигур: $totalBlackPerimeter")
-    println("Сумма площадей всех белых фигур: $totalWhiteArea")
+    println("Сумма периметров черных фигур: $totalBlackPerimeter")
+    println("Сумма площадей белых фигур: $totalWhiteArea")
 }
 
 const val COLOR_BLACK = "black"
