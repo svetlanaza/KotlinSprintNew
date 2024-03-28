@@ -2,44 +2,40 @@ package lesson_14
 
 open class HeavenlyBody(
     val name: String,
-    val category: String,
+    val isAtmosphere: Boolean,
+    val isPossibilityOfDisembarkation: Boolean,
 )
 
 class Planet(
     name: String,
-    category: String,
-    val isAtmosphere: Boolean = false,
-    val isPossibilityOfDisembarkation: Boolean = false,
-    val satellites: List<Satellite>,
-    ) : HeavenlyBody(name, category) {
+    isAtmosphere: Boolean,
+    isPossibilityOfDisembarkation: Boolean,
+    private val satellites: List<Satellite>,
+) : HeavenlyBody(name, isAtmosphere, isPossibilityOfDisembarkation) {
 
     fun printInfoPlanet() {
         println(
-            "Небеснное тело $name относися к категории: $category;\n" +
-                    "Наличие атмосферы - ${isAtmosphere};\n" +
-                    "Возможнность высадки - ${isPossibilityOfDisembarkation};\n" +
-                    "Имеет 2 спутника:"
-
+            "Небесное тело $name: \n" +
+                    "Наличие атмосферы - $isAtmosphere;\n" +
+                    "Возможность высадки - $isPossibilityOfDisembarkation;\n" +
+                    "Имеет спутники:"
         )
         satellites.forEach {
             println(it.name)
+        }
     }
 }
 
 class Satellite(
     name: String,
-    category: String,
-) : HeavenlyBody(name, category)
+    isAtmosphere: Boolean = false,
+    isPossibilityOfDisembarkation: Boolean = false,
+) : HeavenlyBody(name, isAtmosphere, isPossibilityOfDisembarkation)
 
 fun main() {
-    val satellite1 = Satellite("Фобос", "Спутники")
-    val satellite2 = Satellite("Деймос", "Спутники")
-    val planet = Planet("Марс", "Планеты", false,
-        false, listOf(satellite1,satellite2))
+    val satellite1 = Satellite("Фобос")
+    val satellite2 = Satellite("Деймос")
+    val planet = Planet("Марс", false, false, listOf(satellite1, satellite2))
 
-    
     planet.printInfoPlanet()
-
-    }
 }
-
