@@ -11,8 +11,7 @@ abstract class Member(val name: String) {
     }
 }
 
-class RegularUser(name: String) : Member(name) {
-}
+class RegularUser(name: String) : Member(name)
 
 class Administrator(name: String) : Member(name) {
 
