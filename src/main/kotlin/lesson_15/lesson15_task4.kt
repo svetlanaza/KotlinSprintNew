@@ -1,8 +1,8 @@
 package lesson_15
 
-abstract class Product(val name: String, val quantity: Int) : Search
+abstract class Product(val name: String, val quantity: Int) : Searchable
 
-interface Search {
+interface Searchable {
 
     fun searchComponents() {
         println("Введите название инструмента")
@@ -10,7 +10,7 @@ interface Search {
     }
 }
 
-class Instrumental(name: String, quantity: Int) : Product(name,quantity)
+class Instrumental(name: String, quantity: Int) : Product(name, quantity)
 
 class Component(name: String, quantity: Int) : Product(name, quantity)
 
