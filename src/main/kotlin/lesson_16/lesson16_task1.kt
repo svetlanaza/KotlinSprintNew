@@ -1,15 +1,15 @@
 package lesson_16
 
-class Cube() {
+class Cube {
 
     private val number = (1..6).random()
 
-    fun getNumber() = number
+    fun getPrintNumber() {
+        println(number)
     }
+}
 
 fun main() {
     val cube = Cube()
-    println(cube.getNumber())
-
-
+    cube.getPrintNumber()
 }
