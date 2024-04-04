@@ -5,7 +5,7 @@ class Folder(name: String, numberOfFiles: Int, private val isSecret: Boolean) {
         get() = if (isSecret == true) "скрытая папка" else field
 
     val folderFileCount = numberOfFiles
-        get() = if (isSecret) 0 else field
+        get() = if (isSecret == true) 0 else field
 }
 
 fun main() {
