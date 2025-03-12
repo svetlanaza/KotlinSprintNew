@@ -1,7 +1,7 @@
 package lesson_2
 
 fun main() {
-    val departureTime = 9
+    val departureTime = 10
     val minuteOfDeparture = 39
     val travelTime = 457
     val travelTimeHours = travelTime / 60
